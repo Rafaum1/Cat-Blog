@@ -1,0 +1,259 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+:root{
+    font-size: 62.5%;
+
+    --base-branca: #F4FCFF;
+    --base-ciano-escuro: #065E7C;
+    --base-ciano-claro: #387E96;
+    --base-title: #202024;
+    --base-paragraph: #121214;
+
+    font-family: 'Mulish', sans-serif;
+}
+
+body{
+    background: var(--base-branca);
+}
+
+header{
+    background: var(--base-ciano-escuro);
+    height: 7.2rem;
+
+    width: 100%;
+}
+
+.page{
+    display: flex;
+    gap: 3.4rem;
+    justify-content: center;
+}
+
+header nav{
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 1.6rem 0 1.4rem  ;
+
+    gap: 2.4rem;
+}
+
+.logo-pata{
+    width: 4rem;
+    height: 4rem;
+}
+
+header nav input{
+    background: var(--base-ciano-claro);
+    border: 0;
+    width: 108.3rem;
+    height: 4rem;
+    border-radius: .8rem;
+}
+
+input::placeholder{
+    padding: 1.5rem;
+    color: white;
+}
+
+.avatar{
+    width: 4.2rem;
+    height: 4.2rem;
+
+    border-radius: 50%;
+}
+
+.descricao{
+    margin-top: 4.5rem;
+    
+
+    width: 80rem;
+}
+
+.descricao .banner{
+    width: 80rem;
+    height: 40rem;
+}
+
+.descricao .avaliacao{
+    margin-top: 3.2rem;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.descricao .avaliacao h1{
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--base-title);
+}
+
+.descricao .avaliacao .btn-avaliacao img{
+    width: 4rem;
+    height: 4rem;
+}
+
+.descricao .avaliacao .btn-avaliacao #btn-like{
+    margin-right: 1.2rem;
+
+}
+
+.descricao .avaliacao .btn-avaliacao #btn-like, .descricao .avaliacao .btn-avaliacao #btn-deslike{
+    transition: .3s;
+    cursor: pointer;
+}
+
+.descricao .avaliacao .btn-avaliacao #btn-like:hover, .descricao .avaliacao .btn-avaliacao #btn-deslike:hover{
+    transform: scale(1.15);
+    box-shadow: #065E7C;
+}
+
+.descricao .paragrafos-descricao{
+    margin-top: 3.2rem;
+}
+
+.descricao .paragrafos-descricao p{
+    font-size: 160%;
+    font-weight: 400;
+    line-height: 2.5rem;
+    color: var(--base-paragraph);
+}
+
+.container{
+    margin-top: 4.5rem;
+    
+
+    width: 38.4rem;
+    height: 61.5rem;
+
+    overflow: scroll;
+}
+
+.container .artigos h1{
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--base-title);
+    margin-bottom: 3.2rem;
+}
+
+.container .artigos .item{
+    margin-bottom: 3.2rem;
+}
+
+.container .artigos .item img{
+    width: 15.1rem;
+    height: 8.4rem;
+}
+
+.container .artigos .item .detalhes h2{
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 160%;
+    color: var(--base-title);
+}
+
+.container .artigos .item .detalhes p{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 160%;
+}
+
+.container .artigos .item{
+    display: flex;
+    gap: 1.6rem;
+    align-items: center;
+}
+
+.rodape{
+    background: var(--base-ciano-claro);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--base-branca);
+
+    width: 100%;
+    height: 6.4rem;
+
+    margin-top: 3.9rem;
+
+    font-weight: 600;
+}
+
+@media (max-width: 720px){
+
+    body{
+        width: clamp(720px, 450px, 360px);
+        display: grid;
+        height: 915px;
+    }
+    
+    .page{
+        flex-direction: column;
+        width: clamp(720px, 412px, 360px);
+
+        align-items: center;
+
+        margin-top: 0;
+    }
+
+    header{
+        width: 450px;
+    }
+
+    header nav{
+        width: 450px;
+        display: grid;
+
+        align-items: center;
+
+        grid-template-columns: 9.3rem 24rem 9.3rem;
+
+        margin-bottom: 0;
+    }
+
+    header nav input{
+        width: 24rem;
+    }
+
+    .descricao{
+        width: 450px;
+    }
+    
+    .descricao .banner{
+        width: 450px;
+        height: 225px;
+    }
+
+    .descricao .avaliacao{
+        display: block;
+    }
+
+    .descricao .avaliacao h1{
+        margin-bottom: 0.8rem;
+        font-size: 2.4rem;
+    }
+
+    .descricao .paragrafos-descricao{
+
+        width: 412px
+    }
+
+    .container{
+        width: 412px;
+    }
+
+    .rodape{
+        width: 450px;
+    }
+
+}
